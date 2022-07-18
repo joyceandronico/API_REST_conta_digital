@@ -3,7 +3,7 @@ require('express-async-errors');
 const bodyParser = require('body-parser');
 const { errorMiddleware } = require('./middlewares/error');
 const mongoose = require('mongoose')
-const url = 'mongodb+srv://joyce_and:ACGK1wrDshiOrBP1@desafioxp.eyycz.mongodb.net/?retryWrites=true&w=majority'
+const url = 'mongodb+srv://joyce_and:ACGK1wrDshiOrBP1@desafioxp.eyycz.mongodb.net/investimentos?retryWrites=true&w=majority'
 const { investRouter } = require('./routes/investimentos.routes');
 
 const app = express();
