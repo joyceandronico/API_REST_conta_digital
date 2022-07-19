@@ -1,9 +1,8 @@
 'use strict';
-const { Model } = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const Clientes = sequelize.define('Clientes', {
-    saldo: DataTypes.number,
+    saldo: DataTypes.REAL(10, 2),
 
   }, {
     tableName: 'clientes'
