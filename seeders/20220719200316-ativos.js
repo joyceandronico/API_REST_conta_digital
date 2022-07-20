@@ -25,7 +25,8 @@ module.exports = {
         quantidade: 8,
       },
 
-      ], { timestamps: false });
+      ],
+    );
   },
 
   down: async (queryInterface) => {

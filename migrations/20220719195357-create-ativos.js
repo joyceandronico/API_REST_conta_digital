@@ -15,12 +15,14 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
+        allowNull: true,
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn("NOW"),
       },
       updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
+        allowNull: true,
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn("NOW"),
       }
     });
   },

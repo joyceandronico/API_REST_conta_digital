@@ -22,7 +22,7 @@ module.exports = {
 
         saldo: 75.09,
       }
-      ], { timestamps: false });
+      ]);
   },
 
   down: async (queryInterface, _Sequelize) => {

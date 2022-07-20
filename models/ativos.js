@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     valor: DataTypes.REAL(10, 2),
     quantidade: DataTypes.INTEGER,
 
-  }, { timestamps: false });
+  });
 
   return Ativos;
 };
