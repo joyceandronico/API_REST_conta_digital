@@ -11,4 +11,5 @@ const assetsByCodAtivo = async (codAtivo) => {
 
 module.exports = {
     assetsByCodAtivo,
-}
+};
+
