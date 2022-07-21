@@ -13,7 +13,7 @@ app.use(express.json());
 app.use('/investimentos', investRouter);
 app.use('/ativos', ativosRouter);
 app.use('/ativos/codCliente', ativosCodClienteRouter)
-app.use('/contas', contasRouter);
+app.use('/conta', contasRouter);
 
 
 
