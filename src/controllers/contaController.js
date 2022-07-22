@@ -13,10 +13,21 @@ const saldoCliente = async (req, res, next) => {
     } catch (error) {
         next(error)
     };
-}
+};
+
+const saque = async (req, res, next) => {
+    const { valor, codCliente } = req.body;
+    try {
+        const novoSaque = await contaService.saque(valor, codCliente);
+        return res.status(201).json(novoSaque);
+    } catch (error) {
+        next(error);
+    };
+};
 
 
 module.exports = {
     saldoCliente,
+    saque,
 }
 

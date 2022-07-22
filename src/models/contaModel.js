@@ -9,8 +9,17 @@ const saldoCliente = async (codCliente) => {
     return saldo;
 };
 
+const saque = async (valorSaque, cliente) => {
+    const [query] = await connection.execute(
+        `INSERT INTO investimentos.saques (valor, codCliente) VALUES (?,?)`,
+        [valorSaque, cliente],
+    );
+    return ({ id: query.id, valor: valorSaque, codCliente: cliente })
+};
+
 
 module.exports = {
     saldoCliente,
-}
+    saque,
+};
 
