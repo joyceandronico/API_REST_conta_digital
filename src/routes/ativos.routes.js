@@ -3,8 +3,6 @@ const ativosRouter = express.Router();
 
 const ativosController = require('../controllers/ativosController');
 
-
-
 ativosRouter.get('/:codAtivo', ativosController.assetsByCodAtivo);
 
 
