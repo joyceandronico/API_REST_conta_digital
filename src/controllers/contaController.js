@@ -25,9 +25,21 @@ const saque = async (req, res, next) => {
     };
 };
 
+const deposito = async (req, res, next) => {
+    const { valor, codCliente } = req.body;
+    try {
+        const novoDeposito = await contaService.deposito(valor, codCliente);
+        return res.status(201).json(novoDeposito);
+    } catch (error) {
+        next(error);
+    };
+};
+
+
 
 module.exports = {
     saldoCliente,
     saque,
+    deposito,
 }
 
