@@ -52,16 +52,16 @@ npm run start
 ```bash
 
  {
-	    "codCliente": 4,
-		"codAtivo": 4,
-		"quantidade": 10
-		}
+ 	"codCliente": 4,
+	"codAtivo": 4,
+	"quantidade": 10
+}
 ```
 * Se houver sucesso na compra, a seguinte mensagem será retornada:
 
 ```bash
 
- {
+{
 	"message": "compra efetuada"
 }
 ```
@@ -69,7 +69,7 @@ npm run start
 
 ```bash
 
- {
+{
 	"message": "compra não permitida"
 }
 ```
@@ -82,18 +82,18 @@ npm run start
 
 ```bash
 
- {
-	    "codCliente": 4,
-		"codAtivo": 4,
-		"quantidade": 10
-		}
+{
+    	"codCliente": 4,
+	"codAtivo": 4,
+	"quantidade": 10
+}
 ```
 
 *  Se houver sucesso na compra, a seguinte mensagem será retornada:
 
 ```bash
 
- {
+{
 	"message": "venda efetuada"
 }
 ```
@@ -102,7 +102,7 @@ npm run start
 
 ```bash
 
- {
+{
 	"message": "venda não permitida"
 }
 ```
@@ -163,8 +163,8 @@ npm run start
 
 ```bash
 {
-"valor": 5000.00,
-"codCliente": 3
+	"valor": 5000.00,
+	"codCliente": 3
 }
 ```
 
@@ -195,8 +195,8 @@ npm run start
 
 ```bash
 {
-"valor": 100.80,
-"codCliente": 3
+	"valor": 100.80,
+	"codCliente": 3
 }
 ```
 * Se o saque for efetuado, a seguinte mensagem será retornada:
