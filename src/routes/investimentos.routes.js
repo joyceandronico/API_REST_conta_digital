@@ -7,9 +7,7 @@ const investController = require('../controllers/investControllers');
 investRouter.post('/comprar', investController.quantidadeAtivoDisponivel, investController.compra, investController.updateCompraAtivo)
 
 
-investRouter.post('/vender', async (req, res) => {
-    res.status(201).json({ message: 'venda efetuada com sucesso' });
-});
+investRouter.post('/vender', investController.quantidadeDisponivelVenda, investController.updateVenda)
 
 module.exports = {
     investRouter,
