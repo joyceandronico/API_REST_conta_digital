@@ -40,18 +40,17 @@ const updateQuantidadeAtivo = async (novaQuantidadeDisponivel, ativo) => {
 };
 
 
-
 const quantidadeDisponivelVenda = async (codAtivo, codCliente) => {
     const [data] = await connection.execute(
         `SELECT  qtdeAtivo
         FROM investimentos.ativos_do_cliente WHERE codAtivo = ? AND codCliente = ?;`, [codAtivo, codCliente],
     );
-    console.log(data)
+
     return data[0].qtdeAtivo;
 };
 
 const updateVenda = async (ativo, cliente, quantidadeVenda) => {
-    console.log(quantidadeVenda, ativo, cliente)
+
     await connection.execute(
         `UPDATE investimentos.ativos_do_cliente
         SET ativos_do_cliente.qtdeAtivo = ativos_do_cliente.qtdeAtivo - ?

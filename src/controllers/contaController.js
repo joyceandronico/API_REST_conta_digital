@@ -5,9 +5,7 @@ const saldoCliente = async (req, res, next) => {
     const saldoCodCliente = await contaService.saldoCliente(codCliente);
 
     try {
-        if (!saldoCodCliente) {
-            return res.status(404).json({ message: 'Cliente não encontrado' })
-        };
+
         return res.status(200).json(saldoCodCliente);
 
     } catch (error) {
@@ -30,8 +28,11 @@ const saldoDisponivel = async (req, res, next) => {
     const { codCliente, valor } = req.body;
     try {
         const saldoDisponivel = await contaService.saldoDisponivel(codCliente);
+        if (valor <= 0) {
+            return res.status(400).json({ message: 'saque não permitido; valor deve ser maior que 0' })
+        }
         if (saldoDisponivel[0].saldo < valor) {
-            return res.status(400).json({ message: 'saque não permitido' })
+            return res.status(400).json({ message: 'saque não permitido; saldo insuficiente' })
         }
         next()
     } catch (error) {
