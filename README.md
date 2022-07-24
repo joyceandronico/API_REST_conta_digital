@@ -41,12 +41,15 @@ npm run start
 
 ### Compra de ativos
 
-* Para comprar um ativo, devemos acessar o endpoint `POST (/investimentos/comprar)`
+* Para comprar um ativo, o endpoint `POST (/investimentos/comprar)` deve ser acessado
+
 * A compra não será possível se a quantidade a ser comprada for maior que a disponível na corretora
 * O corpo da requisição deve ter a seguinte estrutura, onde:
 
   codCliente: código do cliente que comprará o ativo
+  
   codAtivo: código do ativo a ser comprado
+  
   quantidade: quandtidade do ativo a ser comprada
 
 ```bash
@@ -76,7 +79,8 @@ npm run start
 
 ### Venda de ativos
 
-* Para vender um ativo, devemos acessar o endpoint `POST (/investimentos/vender)`
+* Para vender um ativo, o endpoint `POST (/investimentos/vender)` deve ser acessado
+
 * A venda não será possível se a quantidade a ser vendida for maior que a disponível na carteira do cliente
 * O corpo da requisição deve ter a seguinte estrutura:
 
@@ -113,8 +117,11 @@ npm run start
 * A resposta da API terá a seguinte estrutura, onde:
 
   CodCliente: código do cliente pesquisado (que foi passado na URL)
+  
   codAtivo: código do ativo que o cliente possui
+  
   valor: valor unitário do ativo
+  
   qtdeAtivo: quantidade do ativo que o cliente possui.
 
 ```bash
@@ -140,7 +147,9 @@ npm run start
 * A resposta da API terá a seguinte estrutura, onde:
 
   codAtivo: código do ativo pesquisado (que foi passado na URL)
+  
   valor: valor unitário do ativo
+  
   quantidade: quantidade disponível para compra
 
 ```bash
@@ -156,9 +165,11 @@ npm run start
 ### Depósitos
 
 * Para realizar um depósito, o endpoint `POST (/conta/deposito)` deve ser acessado
+
 *  O corpo da requisição deve ter a seguinte estrutura, onde:
 
   valor: valor a ser depositado
+  
   codCliente: conta que receberá o depósito
 
 ```bash
@@ -188,6 +199,7 @@ npm run start
 ### Saques
 
 * Para realizar um saque, o endpoint `POST (/conta/saque)` deve ser acessado
+
 *  O corpo da requisição deve ter a seguinte estrutura, onde:
 
   valor: valor a ser depositado
@@ -226,9 +238,11 @@ npm run start
 ### Exibir saldo do cliente
 
 * Para exibir o saldo do cliente, devemos acessar o endpoint `GET (/conta/{cod-cliente})` passando na URL o código do cliente
+
 * A resposta da API terá a seguinte estrutura, onde:
 
   codCliente: código do cliente pesquisado
+  
   saldo: saldo atual do cliente
 
 ```bash
