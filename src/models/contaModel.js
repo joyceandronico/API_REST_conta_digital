@@ -2,12 +2,18 @@ const connection = require('./connection');
 
 const saldoCliente = async (codCliente) => {
     const [saldo] = await connection.execute(
-        `SELECT * FROM investimentos.clientes
+        `SELECT codCliente, saldo FROM investimentos.clientes
         WHERE codCliente = ?`, [codCliente]
     );
-
     return saldo;
 };
+
+const saldoDisponivel = async (codCliente) => {
+    const [data] = await connection.execute(
+        `SELECT saldo FROM investimentos.clientes WHERE codCliente = ?;`, [codCliente],
+    );
+    return data
+}
 
 const saque = async (valorSaque, cliente) => {
     const [query] = await connection.execute(
@@ -15,6 +21,14 @@ const saque = async (valorSaque, cliente) => {
         [valorSaque, cliente],
     );
     return ({ id: query.id, valor: valorSaque, codCliente: cliente })
+};
+
+const updateSaldoSaque = async (novoSaldoDisponivel, cliente) => {
+    await connection.execute(
+        `UPDATE investimentos.clientes
+        SET clientes.saldo = clientes.saldo - ?
+        WHERE codCliente = ? `, [novoSaldoDisponivel, cliente]
+    );
 };
 
 const deposito = async (valorDeposito, cliente) => {
@@ -26,10 +40,11 @@ const deposito = async (valorDeposito, cliente) => {
 };
 
 
-
 module.exports = {
     saldoCliente,
     saque,
+    updateSaldoSaque,
     deposito,
+    saldoDisponivel,
 };
 

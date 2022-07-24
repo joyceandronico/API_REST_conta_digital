@@ -16,7 +16,6 @@ const quantidadeAtivoDisponivel = async (req, res, next) => {
 
 const compra = async (req, res, next) => {
     const { codCliente, codAtivo, quantidade } = req.body;
-    console.log(req.body);
     try {
         await investService.compra(codCliente, codAtivo, quantidade);
         next()

@@ -12,22 +12,16 @@ const compra = async (cliente, ativo, qtdeComprada,) => {
 const quantidadeAtivoDisponivel = async (codAtivo) => {
     const [data] = await connection.execute(
         `SELECT codAtivo, quantidade FROM investimentos.ativos WHERE codAtivo = ?;`, [codAtivo],
-
-
     );
     return data
 }
-
-
 
 const updateQuantidadeAtivo = async (ativo, novaQuantidadeDisponivel) => {
     await connection.execute(
         `UPDATE investimentos.ativos
         SET ativos.quantidade = ativos.quantidade - ?
         WHERE codAtivo = ? `, [novaQuantidadeDisponivel, ativo]
-
     );
-
 };
 
 
