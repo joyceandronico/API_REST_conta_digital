@@ -1,28 +1,26 @@
 const express = require('express');
 require('express-async-errors');
-const bodyParser = require('body-parser');
 const { errorMiddleware } = require('./middlewares/error');
-const mongoose = require('mongoose')
-const url = 'mongodb+srv://joyce_and:ACGK1wrDshiOrBP1@desafioxp.eyycz.mongodb.net/?retryWrites=true&w=majority'
 const { investRouter } = require('./routes/investimentos.routes');
+const { ativosRouter } = require('./routes/ativos.routes');
+const { contasRouter } = require('./routes/contas.routes');
+const { ativosCodClienteRouter } = require('./routes/ativosCodCliente.routes')
 
 const app = express();
 
-app.use(bodyParser.json());
+app.use(express.json());
 
-app.use('/', investRouter)
-
-
-
-
-
+app.use('/investimentos', investRouter);
+app.use('/ativos', ativosRouter);
+app.use('/ativos/codCliente', ativosCodClienteRouter)
+app.use('/conta', contasRouter);
 
 
-mongoose.connect(url).then(() => {
-    console.log('conectado ao mongodb!')
-    app.listen(3000);
-})
-    .catch((err) => {
-        app.use(errorMiddleware);
-    })
+
+
+app.listen(3000, () => {
+    console.log('ouvindo a porta 3000')
+});
+
+app.use(errorMiddleware);
 
