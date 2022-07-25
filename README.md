@@ -1,13 +1,23 @@
 # Desafio técnico XP - back-end
 
-O projeto é a construção de uma API RESTful utilizando a arquitetura MSC, que define bem as responsabilidades de cada camada da aplicação. O banco de dados utilizado foi o MySQL. Escolhi um banco relacional devido à facilidade para compreensão e recuperação dos dados.
+## Abordagem
 
-A aplicação permite a compra e venda de ativos, verificação de saldo e execução de saques e depósitos.
+Para o desenvolvimento, defini metas diárias e usei o Trello para me orientar. A principio, defini que criaria a aplicação usando o banco NoSQL MongoDb. Percebi que essa não seria a melhor abordagem. O MySQL seria uma opção melhor porque as entidades que eu precisaria criar tinham um relacionamento muito bem definido e isso facilitaria para a recuperação dos dados. Durante o desenvolvimento usei o ORM Sequelize. Porém, tive dificuldades para criar o banco de dados da forma que a aplicação precisava. Decidi seguir sem ORM e o trabalho fluiu mais rapidamente. Precisei redefinir as metas para cumprir o prazo.
+
+## Descrição geral
+
+O projeto é uma API RESTful que simula as funcionalidades de um aplicativo de investimento em ações (compra e venda de ativos), além de possibilitar depósitos e saques em uma conta digital.
 
 
 ## Tecnologias usadas
 
-Node.js, Express e MySQL
+Nodejs, Express e MySQL
+
+## Clonando o projeto
+
+```bash
+git@github.com:joyceandronico/desafio_tecnico-XP-back-end.git
+```
 
 ## Instalando Dependências
 
