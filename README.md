@@ -2,7 +2,7 @@
 
 ## Abordagem
 
-Para o desenvolvimento, defini metas diárias e usei o Trello para me orientar. A principio, defini que criaria a aplicação usando o banco NoSQL MongoDb. Percebi que essa não seria a melhor abordagem. O MySQL seria uma opção melhor porque as entidades que eu precisaria criar tinham um relacionamento muito bem definido e isso facilitaria para a recuperação dos dados. Durante o desenvolvimento usei o ORM Sequelize. Porém, tive dificuldades para criar o banco de dados da forma que a aplicação precisava. Decidi seguir sem ORM e o trabalho fluiu mais rapidamente. Precisei redefinir as metas para cumprir o prazo.
+Para o desenvolvimento, defini metas diárias e usei o Trello para me orientar. A principio, defini que criaria a aplicação usando o banco NoSQL MongoDb. Percebi que essa não seria a melhor abordagem. O MySQL seria uma opção melhor porque as entidades que eu precisaria criar tinham um relacionamento muito bem definido e isso facilitaria para a recuperação dos dados. Fiz as queries do banco de dados diretamente na camada model, sem utilizar um ORM para isso, pois tenho mais facilidade fazendo dessa forma. Como precisei redefinir as metas devido à mudança de abordagem, isso acelerou um pouco o processo de criação do projeto. 
 
 ## Descrição geral
 
