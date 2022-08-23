@@ -10,7 +10,7 @@ Nodejs, Express e MySQL
 ## Clonando o projeto
 
 ```bash
-git@github.com:joyceandronico/desafio_tecnico-XP-back-end.git
+git@github.com:joyceandronico/API_REST_conta_digital.git
 ```
 
 ## Instalando Dependências
