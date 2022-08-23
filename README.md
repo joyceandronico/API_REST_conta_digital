@@ -1,9 +1,3 @@
-# Desafio técnico XP - back-end
-
-## Abordagem
-
-Para o desenvolvimento, defini metas diárias e usei o Trello para me orientar. A principio, defini que criaria a aplicação usando o banco NoSQL MongoDb. Percebi que essa não seria a melhor abordagem. O MySQL seria uma opção melhor porque as entidades que eu precisaria criar tinham um relacionamento muito bem definido e isso facilitaria para a recuperação dos dados. Fiz as queries do banco de dados diretamente na camada model, sem utilizar um ORM para isso, pois tenho mais facilidade fazendo dessa forma. Como precisei redefinir as metas devido à mudança de abordagem, isso acelerou um pouco o processo de criação do projeto. 
-
 ## Descrição geral
 
 O projeto é uma API RESTful que simula as funcionalidades de um aplicativo de investimento em ações (compra e venda de ativos), além de possibilitar depósitos e saques em uma conta digital.
@@ -60,7 +54,7 @@ npm run start
   
   codAtivo: código do ativo a ser comprado
   
-  quantidade: quandtidade do ativo a ser comprada
+  quantidade: quantidade do ativo a ser comprada
 
 ```bash
 
