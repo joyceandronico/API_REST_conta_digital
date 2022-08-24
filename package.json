@@ -1,5 +1,5 @@
 {
-  "name": "desafio_tecnico-xp-back-end",
+  "name": "api_rest_conta_digital",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -9,23 +9,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joyceandronico/desafio_tecnico-XP-back-end.git"
+    "url": "git+https://github.com/joyceandronico/API_REST_conta_digital.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/joyceandronico/desafio_tecnico-XP-back-end/issues"
+    "url": "https://github.com/joyceandronico/API_REST_conta_digital/issues"
   },
-  "homepage": "https://github.com/joyceandronico/desafio_tecnico-XP-back-end#readme",
+  "homepage": "https://github.com/joyceandronico/API_REST_conta_digital#readme",
   "dependencies": {
     "body-parser": "^1.20.0",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "express-async-errors": "^3.1.1",
     "joi": "^17.6.0",
-    "mongodb": "^4.8.0",
-    "mongoose": "^6.4.4",
+    "mysql2": "^2.3.3",
     "nodemon": "^2.0.19",
     "routes": "^2.1.0"
   },

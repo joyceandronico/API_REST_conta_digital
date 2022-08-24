@@ -1,6 +1,6 @@
 -- Active: 1654760059842@@127.0.0.1@3305@investimentos
 
-DROP SCHEMA IF EXISTS `investimentos` ;
+DROP SCHEMA IF EXISTS investimentos ;
 
 CREATE SCHEMA IF NOT EXISTS `investimentos` ;
 

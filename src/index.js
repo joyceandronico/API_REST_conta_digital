@@ -18,8 +18,8 @@ app.use('/conta', contasRouter);
 
 
 
-app.listen(3000, () => {
-    console.log('ouvindo a porta 3000')
+app.listen(3001, () => {
+    console.log('ouvindo a porta 3001')
 });
 
 app.use(errorMiddleware);
