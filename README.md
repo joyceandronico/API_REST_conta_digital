@@ -13,6 +13,12 @@ Nodejs, Express e MySQL
 git@github.com:joyceandronico/API_REST_conta_digital.git
 ```
 
+## Acesse a pasta do projeto
+
+```bash
+cd API_REST_conta_digital
+```
+
 ## Instalando Dependências
 
 Após clonar o projeto, utilize o comando:
