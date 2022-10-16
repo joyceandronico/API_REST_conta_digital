@@ -1,6 +1,6 @@
 ## Descrição geral
 
-O projeto é uma API RESTful que simula as funcionalidades de um aplicativo de investimento em ações (compra e venda de ativos), além de possibilitar depósitos e saques em uma conta digital.
+O projeto é uma API REST que simula as funcionalidades de um aplicativo de investimento em ações (compra e venda de ativos), além de possibilitar depósitos e saques em uma conta digital.
 
 
 ## Tecnologias usadas
