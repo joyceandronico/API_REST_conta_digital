@@ -29,7 +29,7 @@ npm install
 
 ## Variáveis de Ambiente
 
-Na raiz do projeto, crie um arquivo .env para configurar as variáveis de ambiente. Por exemplo, caso o seu usuário SQL seja `nome`, senha `1234` e a porta do MySQL seja a 3306, o arquivo ficará desta forma:
+Na raiz do projeto, crie um arquivo .env para configurar as variáveis de ambiente. Por exemplo, caso o seu usuário SQL seja `nome`, senha `1234` e a porta do MySQL seja a `3306`, o arquivo ficará desta forma:
 
 ```bash
 MYSQL_HOST=localhost
